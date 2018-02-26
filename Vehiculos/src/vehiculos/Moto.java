@@ -15,6 +15,10 @@ public class Moto extends Vehiculo {
 
         System.out.println("Estoy frenando");
     }
+    
+    void derrapar(){
+        
+    }
 
     
 }

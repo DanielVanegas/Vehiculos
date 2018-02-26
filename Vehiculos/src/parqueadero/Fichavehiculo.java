@@ -37,7 +37,7 @@ public class Fichavehiculo extends javax.swing.JFrame {
         marca2 = new javax.swing.JLabel();
         marca3 = new javax.swing.JLabel();
         textocilindraje = new javax.swing.JTextField();
-        textomarca2 = new javax.swing.JTextField();
+        textoaño = new javax.swing.JTextField();
         textomodelo = new javax.swing.JTextField();
         guardar = new javax.swing.JButton();
 
@@ -63,9 +63,9 @@ public class Fichavehiculo extends javax.swing.JFrame {
             }
         });
 
-        textomarca2.addActionListener(new java.awt.event.ActionListener() {
+        textoaño.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textomarca2ActionPerformed(evt);
+                textoañoActionPerformed(evt);
             }
         });
 
@@ -103,7 +103,7 @@ public class Fichavehiculo extends javax.swing.JFrame {
                             .addComponent(marca3))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(textomarca2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textoaño, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(textomodelo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(56, 56, 56))
             .addGroup(layout.createSequentialGroup()
@@ -129,7 +129,7 @@ public class Fichavehiculo extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(marca2)
-                    .addComponent(textomarca2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(textoaño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(51, 51, 51)
                 .addComponent(guardar)
                 .addContainerGap(52, Short.MAX_VALUE))
@@ -146,18 +146,24 @@ public class Fichavehiculo extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_textocilindrajeActionPerformed
 
-    private void textomarca2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textomarca2ActionPerformed
+    private void textoañoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoañoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_textomarca2ActionPerformed
+    }//GEN-LAST:event_textoañoActionPerformed
 
     private void textomodeloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textomodeloActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textomodeloActionPerformed
 
     private void guardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guardarMouseClicked
-       String a=textomarca.getText();
+       
+        miMoto.marca=textomarca.getText();
+        miMoto.cilindraje=Integer.parseInt(textocilindraje.getText());
+        miMoto.modelo=textomodelo.getText();
+        miMoto.año=Integer.parseInt(textoaño.getText());
+        
+     /*   String a=textomarca.getText();
        textocilindraje.setText(a);
-       textomodelo.setText("Hola presionaron del boton");
+       textomodelo.setText("Hola presionaron del boton");*/
     }//GEN-LAST:event_guardarMouseClicked
 
     /**
@@ -201,9 +207,9 @@ public class Fichavehiculo extends javax.swing.JFrame {
     private javax.swing.JLabel marca1;
     private javax.swing.JLabel marca2;
     private javax.swing.JLabel marca3;
+    private javax.swing.JTextField textoaño;
     private javax.swing.JTextField textocilindraje;
     private javax.swing.JTextField textomarca;
-    private javax.swing.JTextField textomarca2;
     private javax.swing.JTextField textomodelo;
     // End of variables declaration//GEN-END:variables
 }
