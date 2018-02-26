@@ -5,6 +5,7 @@
  */
 package parqueadero;
 
+import javax.swing.JOptionPane;
 import vehiculos.Moto;
 
 /**
@@ -12,13 +13,19 @@ import vehiculos.Moto;
  * @author Estudiantes
  */
 public class Fichavehiculo extends javax.swing.JFrame {
-    
-    Moto miMoto=new Moto();
+
+    //Arreglos de objetos
+    Moto misMotos[] = new Moto[50];
+    Moto miMoto = new Moto();
 
     /**
      * Creates new form Fichavehiculo
      */
     public Fichavehiculo() {
+        
+        for (int i = 0; i < 50; i++) {
+            misMotos[i] = new Moto();
+        }
         initComponents();
     }
 
@@ -155,15 +162,16 @@ public class Fichavehiculo extends javax.swing.JFrame {
     }//GEN-LAST:event_textomodeloActionPerformed
 
     private void guardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guardarMouseClicked
-       
-        miMoto.marca=textomarca.getText();
-        miMoto.cilindraje=Integer.parseInt(textocilindraje.getText());
-        miMoto.modelo=textomodelo.getText();
-        miMoto.año=Integer.parseInt(textoaño.getText());
-        
-     /*   String a=textomarca.getText();
-       textocilindraje.setText(a);
-       textomodelo.setText("Hola presionaron del boton");*/
+
+        //Integer.parseInt(); cambiar de string a int
+        //String.valueOf(5); -----> "5"
+        miMoto.marca = textomarca.getText();
+        miMoto.cilindraje = Integer.parseInt(textocilindraje.getText());
+        miMoto.modelo = textomodelo.getText();
+        miMoto.año = Integer.parseInt(textoaño.getText());
+
+        JOptionPane.showMessageDialog(null, "Exito");
+
     }//GEN-LAST:event_guardarMouseClicked
 
     /**
